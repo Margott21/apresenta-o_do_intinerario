@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loja de Tênis | E-Commerce</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-logo">S</span>
+        <div>
+          <h1>SportSneakers</h1>
+          <p>Seu lugar para tênis com estilo</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="auth-button" id="authButton">Entrar</button>
+        <div class="user-badge hidden" id="userBadge">
+          <span id="userName">Usuário</span>
+          <button class="logout-button" id="logoutButton">Sair</button>
+        </div>
+        <button class="cart-button" id="openCart">
+          Carrinho <span id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Coleção 2026</p>
+          <h2>Os melhores tênis para treinar e arrasar na rua</h2>
+          <p>Encontre conforto, performance e estilo em uma única loja. Compre online e receba em casa.</p>
+          <a href="#produtos" class="btn btn-primary">Ver Novidades</a>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1528701800489-20a5e4ccf70f?auto=format&fit=crop&w=900&q=80" alt="Tênis esportivo" />
+        </div>
+      </div>
+    </section>
+
+    <section class="features container">
+      <article>
+        <h3>Frete grátis</h3>
+        <p>Compras acima de R$ 299</p>
+      </article>
+      <article>
+        <h3>Pagamentos fáceis</h3>
+        <p>Cartão ou boleto</p>
+      </article>
+      <article>
+        <h3>Troca rápida</h3>
+        <p>Até 30 dias após a compra</p>
+      </article>
+    </section>
+
+    <section class="products-section container" id="produtos">
+      <div class="section-header">
+        <h2>Escolha seu próximo tênis</h2>
+        <p>Seleção especial de modelos para corrida, lifestyle e treino.</p>
+      </div>
+      <div class="products-grid" id="productsGrid"></div>
+    </section>
+  </main>
+
+  <aside class="cart-panel" id="cartPanel" aria-hidden="true">
+    <div class="cart-header">
+      <h2>Meu Carrinho</h2>
+      <button class="close-cart" id="closeCart">×</button>
+    </div>
+    <div class="cart-body" id="cartItems"></div>
+    <div class="cart-footer">
+      <div>
+        <span>Total</span>
+        <strong id="cartTotal">R$ 0,00</strong>
+      </div>
+      <button class="btn btn-secondary" id="checkoutButton">Finalizar Compra</button>
+    </div>
+  </aside>
+
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop"></div>
+  <div class="modal login-modal hidden" id="loginModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeLogin">×</button>
+      <h2>Entrar na SportSneakers</h2>
+      <p>Use o login abaixo para testar o carrinho e a finalização de compra.</p>
+      <form id="loginForm">
+        <label>
+          Email
+          <input type="email" id="email" required placeholder="cliente@teste.com" />
+        </label>
+        <label>
+          Senha
+          <input type="password" id="password" required minlength="6" placeholder="123456" />
+        </label>
+        <button class="btn btn-primary" type="submit">Entrar</button>
+      </form>
+      <p class="modal-note">Email: <strong>cliente@teste.com</strong> | Senha: <strong>123456</strong></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>2026 © SportSneakers. Compre com segurança e estilo.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

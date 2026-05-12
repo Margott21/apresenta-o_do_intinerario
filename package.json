@@ -1,0 +1,13 @@
+{
+  "name": "ecommerce-tenis",
+  "version": "1.0.0",
+  "description": "Site de e-commerce de tênis com backend simples para login e checkout.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.4"
+  }
+}
